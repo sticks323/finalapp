@@ -1,48 +1,27 @@
-*,
-*:after,
-*:before {
+* {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: Karla, sans-serif;
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
-  color: #495e57;
+  color: #495E57;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: max-content;
-  background-color: #ffffff;
-  z-index: 999;
-}
-
-main {
-  padding-top: 6.25rem;
-  min-height: calc(100vh - 6.25rem - 18rem);
+  border-bottom: 1rem solid #495E57;
 }
 
 a {
   text-decoration: none;
-  color: #495e57;
+  color: #495E57;
 }
 
-h1,
-h2 {
+h1, h2 {
   line-height: 1;
   font-family: "Markazi Text";
   font-weight: normal;
@@ -56,32 +35,34 @@ h2 {
   font-size: 2.5rem;
 }
 
+form {
+  max-width: 28.125rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 label {
-  width: fit-content;
   cursor: pointer;
 }
 
-input,
-select {
-  width: 100%;
+input, select {
   height: 2.5rem;
-  padding: 0 0.5rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
   outline: none;
-  border: 1px solid #e0e0e0;
+  border: 0.0625rem solid #E0E0E0;
   border-radius: 0.375rem;
-  background: #ffffff;
-  color: #495e57;
+  background: #FFFFFF;
+  color: #495E57;
   cursor: pointer;
+  transition: border-color 0.3s;
 }
 
-select {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-input:focus,
-select:focus {
-  border: 1px solid #495e57;
+input:focus, select:focus {
+  border-width: 0.125rem;
+  border-color: #495E57;
 }
 
 label {
@@ -97,10 +78,15 @@ img {
   max-width: 100%;
 }
 
+main > section {
+  margin-bottom: 5rem;
+}
+
 .container {
-  max-width: 61.75rem;
+  max-width: 61.625rem;
   width: 90%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid {
@@ -110,15 +96,16 @@ img {
 .button-primary {
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  background-color: #f4ce14;
-  color: #495e57;
+  background-color: #F4CE14;
+  color: #495E57;
   font-weight: bold;
-  border: 2px solid #f4ce14;
+  border: 0.1875rem solid #F4CE14;
+  transition: background, border, color 0.5s;
 }
 
-.button-primary:hover,
+.button-primary:hover, 
 .button-primary:focus {
-  background-color: #495e57;
-  border-color: #495e57;
-  color: #ffffff;
+  background-color: #495E57;
+  border-color: #495E57;
+  color: #FFFFFF;
 }
